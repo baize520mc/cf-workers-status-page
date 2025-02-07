@@ -27,7 +27,7 @@ monitors:
   - id: cloud-disk
     name: 博客附属网盘 (Cloud disk website)
     description: '龟速网盘[位于中国-腾讯云]'
-    url: 'https://cloud.baaaize.site'
+    url: 'https://cloud.baaaize.site/'
     method: GET
     expectStatus: 200
     linkable: true # allows the title to be a link, default=true
@@ -35,7 +35,7 @@ monitors:
   - id: onedrive-disk
     name: Onedrive代理网盘 (Onedrive vercel index)
     description: '白嫖Onedrive网盘[位于国外-Vercel]'
-    url: 'https://cloud.baaaize.us.kg'
+    url: 'https://cloud.baaaize.us.kg/'
     method: GET
     expectStatus: 200
     linkable: true # allows the title to be a link, default=true
@@ -43,7 +43,7 @@ monitors:
   - id: bing-ai
     name: 必应AI (Bing AI website)
     description: '一个其他大佬的开源项目，应该用不了了？[位于国外-Cloudflare]'
-    url: 'https://bingai.baaaize.us.kg'
+    url: 'https://bingai.baaaize.us.kg/'
     method: GET
     expectStatus: 200
     linkable: true # allows the title to be a link, default=true
@@ -51,7 +51,7 @@ monitors:
   - id: status
     name: 状态页面 (Status website)
     description: '查看各系统状态的网页，其他大佬的开源项目[位于国外-Cloudflare]'
-    url: 'https://cf-workers-status-page-production.bailing520mc.workers.dev'
+    url: 'https://status.baaaize.us.kg/'
     method: GET
     expectStatus: 200
     linkable: false # allows the title to be a link, default=true
