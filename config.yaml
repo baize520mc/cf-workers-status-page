@@ -1,39 +1,49 @@
 settings:
-  title: 'Status Page'
-  url: 'https://status-page.eidam.dev' # used for Slack messages
+  title: '状态页面 (Status Page)'
+  url: 'https://status.baaaize.us.kg' # used for Slack messages
   logo: logo-192x192.png # image in ./public/ folder
-  daysInHistogram: 90 # number of days you want to display in histogram
+  daysInHistogram: 30 # number of days you want to display in histogram
   collectResponseTimes: true # collects avg response times from CRON locations
 
-  allmonitorsOperational: 'All Systems Operational'
-  notAllmonitorsOperational: 'Not All Systems Operational'
-  monitorLabelOperational: 'Operational'
-  monitorLabelNotOperational: 'Not Operational'
-  monitorLabelNoData: 'No data'
-  dayInHistogramNoData: 'No data'
-  dayInHistogramOperational: 'All good'
-  dayInHistogramNotOperational: ' incident(s)' # xx incident(s) recorded
+  allmonitorsOperational: '所有系统正常 (All Systems Operational)'
+  notAllmonitorsOperational: '部分系统正常 (Not All Systems Operational)'
+  monitorLabelOperational: '可以使用 (Operational)'
+  monitorLabelNotOperational: '不可使用 (Not Operational)'
+  monitorLabelNoData: '无数据 (No data)'
+  dayInHistogramNoData: '无数据 (No data)'
+  dayInHistogramOperational: '一切正常! (All good)'
+  dayInHistogramNotOperational: ' 事件 incident(s)' # xx incident(s) recorded
 
 monitors:
-  - id: workers-cloudflare-com # unique identifier
-    name: workers.cloudflare.com
-    description: 'You write code. They handle the rest.' # default=empty
-    url: 'https://workers.cloudflare.com/' # URL to fetch
+  - id: main-blog # unique identifier
+    name: 博客主站 (Blog website)
+    description: '博客的主网站[位于中国-腾讯云]（或许以后会有其他线路？）' # default=empty
+    url: 'https://www.baaaize.site/' # URL to fetch
     method: GET # default=GET
     expectStatus: 200 # operational status, default=200
     followRedirect: false # should fetch follow redirects, default=false
-    linkable: false # allows the title to be a link, default=true
+    linkable: true # allows the title to be a link, default=true
 
-  - id: www-cloudflare-com
-    name: www.cloudflare.com
-    description: 'Built for anything connected to the Internet.'
-    url: 'https://www.cloudflare.com'
+  - id: cloud-disk
+    name: 博客附属网盘 (Cloud disk website)
+    description: '龟速网盘[位于中国-腾讯云]'
+    url: 'https://cloud.baaaize.site'
     method: GET
     expectStatus: 200
     linkable: true # allows the title to be a link, default=true
 
-  - id: blog-cloudflare-com
-    name: The Cloudflare Blog
-    url: 'https://blog.cloudflare.com/'
+  - id: bing-ai
+    name: 必应AI (Bing AI website)
+    description: '一个其他大佬的开源项目，应该用不了了？[位于国外-Cloudflare]'
+    url: 'https://bingai.baaaize.us.kg'
     method: GET
     expectStatus: 200
+    linkable: true # allows the title to be a link, default=true
+
+  - id: status
+    name: 状态页面 (Status website)
+    description: '查看各系统状态的网页，其他大佬的开源项目[位于国外-Cloudflare]'
+    url: 'https://status.baaaize.us.kg'
+    method: GET
+    expectStatus: 200
+    linkable: true # allows the title to be a link, default=true
