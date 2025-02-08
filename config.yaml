@@ -17,6 +17,7 @@ settings:
 monitors:
   - id: main-blog # unique identifier
     name: 博客主站 (Blog website)
+    group: China-Tencent
     description: '博客的主网站[位于中国-腾讯云]（或许以后会有其他线路？）' # default=empty
     url: 'https://www.baaaize.site/' # URL to fetch
     method: GET # default=GET
@@ -26,6 +27,7 @@ monitors:
 
   - id: cloud-disk
     name: 博客附属网盘 (Cloud disk website)
+    group: China-Tencent
     description: '龟速网盘[位于中国-腾讯云]'
     url: 'https://cloud.baaaize.site/'
     method: GET
@@ -34,6 +36,7 @@ monitors:
 
   - id: onedrive-disk
     name: Onedrive代理网盘 (Onedrive vercel index)
+    group: Cloudflare
     description: '白嫖Onedrive网盘[位于国外-Vercel]'
     url: 'https://cloud.baaaize.us.kg/'
     method: GET
@@ -42,6 +45,7 @@ monitors:
 
   - id: bing-ai
     name: 必应AI (Bing AI website)
+    group: Cloudflare
     description: '一个其他大佬的开源项目，应该用不了了？[位于国外-Cloudflare]'
     url: 'https://bingai.baaaize.us.kg/'
     method: GET
@@ -50,6 +54,7 @@ monitors:
 
   - id: status
     name: 状态页面 (Status website)
+    group: Cloudflare
     description: '查看各系统状态的网页，其他大佬的开源项目[位于国外-Cloudflare]'
     url: 'https://status.baaaize.us.kg/'
     method: GET
